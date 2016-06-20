@@ -1,1 +1,12 @@
 node_modules/
+.idea
+.idea/ecommerce.iml
+.idea/eslintPlugin.xml
+.idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+package.json
+public/
