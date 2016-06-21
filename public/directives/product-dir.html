@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="http://materializecss.com/images/sample-1.jpg">
+        <img class="activator" ng-src="{{product.imageUrl}}">
     </div>
     <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">{{product.title}}
@@ -17,9 +17,14 @@
         </p>
     </div>
     <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">{{product.name}}
+        <span class="card-title grey-text text-darken-4">{{product.title}}
             <i class="material-icons right">close</i>
         </span>
-        <p>{{product.description}}</p>
+        <input type="text" value="{{product.title}}">
+        <input type="text" value="{{product.price}}">
+        <input type="text" value="{{product.description}}">
+        <input type="text" value="{{product.imageUrl}}">
+        <a class="waves-effect waves-light btn" ng-click="updateProduct(product)"><i
+            class="material-icons left">border_color</i>Save</a>
     </div>
 </div>

@@ -41,20 +41,27 @@ module.exports = {
 	},
 
 	updateProduct( req, res, next ){
-		if( !res.params.id ){
+		if( !req.params.id ){
 			return res.status( 400 )
 			          .send( `id query needed` );
 		}
 		let query = {
 			_id: mongojs.ObjectId( req.params.id )
 		};
+		let change = {
+			title: req.body.title,
+			description: req.body.description,
+			price: req.body.price,
+			imageUrl: req.body.price
+		};
 		db.products.update(
-			query, req.body, function( err, resp ){
+			query, change, function( err, resp ){
 				if( err ){
 					return res.status( 500 )
 					          .json( err );
 				}
-				return res.json( resp );
+				return res.status( 200 )
+				.json( resp );
 			}
 		);
 	},

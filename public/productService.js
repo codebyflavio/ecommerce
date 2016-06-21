@@ -26,6 +26,14 @@ angular.module( 'eCommerceApp' )
 							return response;
 						}
 					);
+				},
+				updateProduct( product ){
+					return $http.put( `/api/products/${product._id}`, product)
+					.then(
+						function( response ){
+						return response;
+						}
+					);
 				}
 	       };
 	   }
