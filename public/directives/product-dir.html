@@ -10,7 +10,7 @@
             <a href="#" ng-if="!isAdmin">
                 <i class="material-icons left">add_shopping_cart</i>
             </a>
-            <a href="#" ng-if="isAdmin">
+            <a ng-if="isAdmin" ng-click="removeProduct(product._id)">
                 <i class="material-icons left">remove</i>
             </a>
             ${{product.price}}

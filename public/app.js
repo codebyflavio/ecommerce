@@ -29,9 +29,7 @@ angular.module( 'eCommerceApp', ['ui.router'] )
 			`admin`, {
 				url: `/panel`,
 				templateUrl: `./views/admin.html`,
-				controller: function( $scope, getProducts ){
-					$scope.products = getProducts;
-				},
+				controller: `adminCtrl`,
 				resolve: {
 					getProducts: function( productService ){
 						return productService.getProducts();
