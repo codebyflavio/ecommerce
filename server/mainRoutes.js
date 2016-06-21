@@ -1,4 +1,4 @@
-const productsCtrl = require( './controllers/productsCtrl' );
+const productsCtrl = require( './products/productsCtrl' );
 
 module.exports = ( app ) => {
 //	GET

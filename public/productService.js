@@ -3,6 +3,7 @@ angular.module( 'eCommerceApp' )
 	.factory(
 	   'productService', function($http){
 			return {
+
 				getProducts(){
 					return $http.get( `/api/products` )
 					.then(
@@ -11,6 +12,7 @@ angular.module( 'eCommerceApp' )
 						}
 					);
 				},
+
 				removeProduct( id ){
 					return $http.delete( `/api/products/${id}` )
 					.then(
@@ -19,21 +21,15 @@ angular.module( 'eCommerceApp' )
 						}
 					);
 				},
+
 				addProduct( product ){
 					return $http.post( `/api/products`, product )
-					.then(
-						function( response ){
-							return response;
-						}
-					);
+					.then( response => response );
 				},
+
 				updateProduct( product ){
-					return $http.put( `/api/products/${product._id}`, product)
-					.then(
-						function( response ){
-						return response;
-						}
-					);
+					return $http.put( `/api/products/${product._id}`, product )
+					.then( response => response );
 				}
 	       };
 	   }

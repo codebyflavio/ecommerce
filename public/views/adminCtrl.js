@@ -10,30 +10,22 @@ angular.module( 'eCommerceApp' )
 			$state.go( $state.current, {}, { reload: true } );
 		};
 
-		$scope.addProduct    = function(){
+		$scope.addProduct    = function(title, price, description, imageUrl){
 			productService.addProduct(
 				{
-					title: $scope.title,
-					price: $scope.price,
-					description: $scope.description,
-					imageUrl: $scope.imageUrl
+					title,
+					price,
+					description,
+					imageUrl
 				}
 			)
-			.then(
-				function( response ){
-					$state.go( $state.current, {}, { reload: true } );
-					return response;
-				}
-			);
+			.then( () => $state.go( $state.current, {}, { reload: true } ) );
 		};
 
 		$scope.updateProduct = function( product ){
 			productService.updateProduct( product )
-			.then(function(response){
-				$state.go( $state.current, {}, { reload: true } );
-				return response;
-			});
+			.then( () => $state.go( $state.current, {}, { reload: true } ) );
 		};
 
 	}
-)
+);
