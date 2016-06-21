@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="http://materializecss.com/images/sample-1.jpg">
+    </div>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{product.title}}
+            <i class="material-icons right">more_vert</i>
+        </span>
+        <p>
+            <a href="#" ng-if="!isAdmin">
+                <i class="material-icons left">add_shopping_cart</i>
+            </a>
+            <a href="#" ng-if="isAdmin">
+                <i class="material-icons left">remove</i>
+            </a>
+            ${{product.price}}
+        </p>
+    </div>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{product.name}}
+            <i class="material-icons right">close</i>
+        </span>
+        <p>{{product.description}}</p>
+    </div>
+</div>

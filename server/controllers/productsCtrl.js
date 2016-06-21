@@ -2,6 +2,7 @@ const mongojs = require( 'mongojs' );
 const db      = mongojs( 'ecommerce', [ 'products' ] );
 
 module.exports = {
+
 	getProducts( req, res, next ){
 		db.products.find(
 			{}, ( err, resp ) =>{
@@ -13,6 +14,7 @@ module.exports = {
 			}
 		);
 	},
+
 	getProduct( req, res, next ){
 		let idObj = { _id: mongojs.ObjectId( req.params.id ) };
 		db.products.findOne(
@@ -25,6 +27,7 @@ module.exports = {
 			}
 		);
 	},
+
 	createProduct( req, res, next ){
 		db.products.save(
 			req.body, ( err, resp ) =>{
@@ -36,6 +39,7 @@ module.exports = {
 			}
 		);
 	},
+
 	updateProduct( req, res, next ){
 		if( !res.params.id ){
 			return res.status( 400 )
@@ -54,6 +58,7 @@ module.exports = {
 			}
 		);
 	},
+
 	deleteProduct( req, res, next ){
 		if( !req.params.id ){
 			return res.status( 400 )
@@ -73,4 +78,5 @@ module.exports = {
 			}
 		);
 	}
+
 };

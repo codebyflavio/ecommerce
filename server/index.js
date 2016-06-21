@@ -7,7 +7,7 @@ const port = 8080;
 
 app.use( json() );
 
-app.use( express.static( `${__dirname}/public` ) );
+app.use( express.static( `${__dirname}/../public` ) );
 
 routes( app );
 

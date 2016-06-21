@@ -1,0 +1,35 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper grey darken-3">
+            <ul class="left">
+                <li class="active">
+                    <a ui-sref="admin" ng-click="isAdmin = true">
+                        <i class="material-icons left">lock</i>
+                        Admin
+                    </a>
+                </li>
+            </ul>
+            <a ui-sref="home" class="brand-logo center">eCommerce</a>
+            <ul class="right">
+                <li class="active">
+                    <a ui-sref="products" ng-click="isAdmin = false">
+                        <i class="material-icons left">search</i>
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons left">verified_user</i>
+                        Order
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons left">shopping_cart</i>
+                        Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
