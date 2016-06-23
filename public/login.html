@@ -1,0 +1,44 @@
+<html>
+​
+<style>
+    #login-form-container {
+        display: flex;
+        flex-direction: row;
+        flex-align: center;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        min-height: 1000px;
+    }
+
+    ​
+    #login-form input[type="text"] {
+        height: 45px;
+        width: 300px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    ​
+    button[type="submit"] {
+        padding: 10px 40px;
+        margin-right: 20px;
+        background-color: #CCC;
+        border: none;
+    }
+</style>
+<body>
+<div id="login-form-container">
+    <form action="/login" method="POST" id="login-form">
+        <h1>LOGIN.HTML</h1>
+        <input type="text" name="username" placeholder="UserName"> <input type="text" name="password"
+                                                                          placeholder="Password"> <br /> <br />
+        <button type="submit">Go</button>
+        ​ <a href="/auth/twitter">Login With Twitter</a>
+    </form>
+</div>
+</body>
+</html>
